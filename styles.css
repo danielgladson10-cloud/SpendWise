@@ -1,0 +1,104 @@
+/* ==========================================================================
+   SpendWise — Interactive Expense & Budget Visualizer
+   Custom Styles, Animations & Chart Enhancements
+   ========================================================================== */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Modal Animations */
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-scaleUp {
+  animation: scaleUp 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Toast Animation */
+@keyframes toastSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.toast-item {
+  animation: toastSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: auto;
+}
+
+/* Progress bar transitions */
+.progress-bar-fill {
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease;
+}
+
+/* Card hover subtle lift */
+.card-hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Pulsing badge when 100%+ budget */
+@keyframes dangerPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.budget-overrun-pulse {
+  animation: dangerPulse 1.8s infinite ease-in-out;
+}
+
+/* Custom styled table row hover */
+tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Chart Canvas container responsive adjustments */
+canvas {
+  width: 100% !important;
+  max-width: 100%;
+}
